@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java script</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+<style >
+	img{
+		height: 200px;
+		width:200px;
+	}
+</style>	
+</head>
+<body>
+	
+	<header>
+		<div class="text-center">
+			<h1 style="background-color: green;color: white;" >This is javascript practice page</h1>
+			<h2 style="background-color: black;color: white;" >button(on click)->text add and change</h2>
+		</div>
+    
+    <div class="card" style="width: 23rem;">
+  <img src="images/2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">hello eveybody..</h5>
+    <p class="card-text" id="demo"></p>
+    
+  </div>
+</div>	
+    
+<button type="button" onclick="document.getElementById('demo').innerHTML='We have dreamt to be successful Freelancer'">Click here</button><br>
+    
+</header>
+
+<section>
+
+<div class="text-center">
+		<h2 style="background-color: black;color: white;" >button(on click)->image change,image height-width change</h2>
+		</div>	
+<img src="images/1.jpg" id="btn" alt="1 pic">
+<button type="button" onclick="document.getElementById('btn').src='images/2.jpg'">1</button>
+<button type="button" onclick="document.getElementById('btn').src='images/1.jpg'">2</button>
+<button type="button" onclick="document.getElementById('btn').style.width='600px'" >3</button>
+<button type="button" onclick="document.getElementById('btn').style.width='200px'" >4</button>
+
+</section>
+
+<section>
+  <div class="text-center">
+		<h2 style="background-color: black;color: white;" >JavaScript can change HTML attribute values.</h2>
+ </div>	  
+	
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='images/pic_on.gif'">Turn on the light</button>
+
+<img id="myImage" src="images/pic_off.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='images/pic_off.gif'">Turn off the light</button>
+
+
+</section>
+
+
+<section>
+<div class="text-center">	
+<h2 style="background-color: black;color: white;" >text and number by document.write</h2></div>
+<p class="text-center">Never call document.write after the document has finished loading.
+It will overwrite the whole document.</p>
+
+<script>
+document.write(5 + 6);
+</script>
+
+</section>
+
+<section>
+<div class="text-center">	
+<h2 style="background-color: black;color: white;" >statement and calculation in consolensole</h2></div>	
+<script >
+	window.alert('Welcome to my page');
+</script>
+<script >
+console.log('Here is some calculated result that will be used later.')
+</script>
+<script>
+console.log(5 + 6);
+</script>
+
+
+<script >
+	var a,b,c,d;
+	a=20;
+	b=10;
+	c=30;
+	d=(a+b)%c;
+	console.log(d);
+
+  </script>
+  
+</section>
+
+<section>
+	<div class="text-center">	
+    <h2 style="background-color: black;color: white;" >The result of calculation using variable</h2>
+   </div>
+
+	<p id="calculate"></p>
+	<script >
+
+  	var a,b,c,sum,avg;
+     a=20;
+     b=30;
+     c=20;
+     sum=a+b+c;
+     avg=sum/2;
+    document.getElementById('calculate').innerHTML='The result of sum is '+sum+ ' .';
+    document.getElementById('calculate').innerHTML='The result of Average is '+avg+' .';
+  </script>
+</section>
+
+<section>
+<div class="text-center">	
+<h2 style="background-color: black;color: white;" >Use of function for text represent</h2></div>
+<p>JavaScript code blocks are written between { and }</p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo1").innerHTML = "We are the students of Dreamland It!";
+  document.getElementById("demo2").innerHTML = "Our batch number is 328";
+}
+</script>
+
+</section>
+
+<section>
+<div class="text-center">	
+<h2 style="background-color: black;color: white;" >The += Operator</h2></div>
+
+<p id="operator"></p>
+
+<script>
+var x = 10;
+x += 5;
+document.getElementById("operator").innerHTML ="The += Operator"+ x;
+</script>
+</section>
+
+<section>
+<div class="text-center"> 
+<h2 style="background-color: black;color: white;" >Array indexes are zero-based, which means the first item is [0].</h2></div>
+<p id="choice"></p>
+<script>
+var cars = ["Saab","Volvo","Bmw"];
+document.getElementById("choice").innerHTML = cars[0];
+</script>
+
+</section>
+
+
+
+<section>
+<div class="text-center"> 
+<h2 style="background-color: black;color: white;" >This example calls a function of area of a circle</h2></div>
+<p id="myFunction"></p>
+
+<script>
+function area(r) {
+  return 3.1416*r*r;;
+}
+document.getElementById("myFunction").innerHTML = area(5);
+</script>
+</section>
+
+<section>
+  <div class="text-center"> 
+<h2 style="background-color: black;color: white;" >Java script object</h2></div>
+
+<p id="object"></p>
+
+<script >
+  var person={
+    firstname:"Saima ",
+    lastname:"Akhter",
+    designation:"lecturer",
+    dept:"ICT"
+    };
+    document.getElementById("object").innerHTML=person.firstname+person.lastname+" is a "+person.designation+" of "+person.dept+".";
+</script>
+
+<p id="obj-this"></p>
+<script >
+ var car={
+ 	car_name:"Premio",
+ 	color:"redwine",
+ 	model:2016,
+ 	
+ 	car_info :function(){
+ 		return this.car_name+" "+this.model;
+ 	}
+ };
+document.getElementById("obj-this").innerHTML=car.car_info();
+
+</script>
+
+</section>
+
+<section>
+<div class="text-center"> 
+<h2 style="background-color: black;color: white;" >Java script date and time </h2></div>
+<button onclick="document.getElementById('time').innerHTML=Date()">The time is?</button>
+
+<button onclick="document.getElementById('time').innerHTML=date()"> The date and time is:</button>
+<p id="time"></p>
+
+</section>
+
+
+
+
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
